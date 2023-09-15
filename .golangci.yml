@@ -1,0 +1,20 @@
+run:
+  deadline: 5m
+
+linters:
+  enable:
+  - nlreturn
+  disable:
+  - exhaustruct
+  - goerr113
+  - unparam
+  - depguard
+  - testpackage
+  presets:
+  - bugs
+  - comment
+  - error
+  - import
+  - performance
+  - test
+  - unused
