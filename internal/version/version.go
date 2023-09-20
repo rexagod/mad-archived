@@ -1,3 +1,4 @@
+// Package version prints the version metadata of the binary.
 package version
 
 import (

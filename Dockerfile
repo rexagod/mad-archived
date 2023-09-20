@@ -27,4 +27,8 @@ RUN addgroup --system nonroot \
 
 USER nonroot:nonroot
 
-ENTRYPOINT ["/mad"]
+ARG SCRAPE_INTERVAL
+ARG TIME_SERIES_SELECTOR
+ARG ENDPOINT
+
+ENTRYPOINT ["/mad", "-scrape-interval", "-time-series-selector", "${TIME_SERIES_SELECTOR}", "-endpoint", "${ENDPOINT}"]

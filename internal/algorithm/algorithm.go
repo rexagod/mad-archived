@@ -1,3 +1,4 @@
+// Package algorithm utilizes the ED-PELT algorithm to detect anomalies in the scraped metrics.
 package algorithm
 
 import (
@@ -10,6 +11,7 @@ import (
 	edpelt "pgregory.net/changepoint"
 )
 
+// Run runs the algorithm on the scraped contents.
 func Run(ctx context.Context, scraper *madscraper.Scraper, stop chan os.Signal) {
 	// samples holds the particular metric metadata after fetching and searching through the scrape payload.
 	var samples []madscraper.TimestampedFloat64

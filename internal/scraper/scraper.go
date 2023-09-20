@@ -1,3 +1,4 @@
+// Package scraper knows how to scrape the endpoint and send the metric value to the sample channel for further processing.
 package scraper
 
 import (

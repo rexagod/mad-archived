@@ -1,3 +1,4 @@
+// Package tests holds the e2e test suite for the ED-PELT algorithm.
 package tests
 
 import (

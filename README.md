@@ -26,15 +26,15 @@ Below are the change-point techniques that were considered for this project.
 
 - **Generalized Likelihood Ratio (GLR):** Uses likelihood ratios to test changes at every data point, assuming the data follows different distributions before and after a change. Though powerful and versatile in change-detection, it can be complex to implement and requires more computational resources, making it a heavy-duty option for large, real-time datasets.
 
-- **PELT**: The Pruned Exact Linear Time (PELT) algorithm is designed for known data distributions and employs a cost function to manage change points, helping to prevent over-fitting. With its 'exact linear time' efficiency, PELT is apt for larger datasets and scenarios where data distribution is assumed.
+- **Pruned Exact Linear Time (PELT)**: Designed for data distributions with known characteristics, this algorithm employs a cost function to manage change points, helping to prevent over-fitting. With its 'exact linear time' efficiency, PELT is apt for larger datasets and scenarios where data distribution is assumed.
 
-- **ED-PELT**: ED-PELT, alternatively, requires minimal assumptions on data distribution. It models inter-arrival times using an exponential distribution. Like PELT, it works swiftly even on large datasets and particularly shines in complex scenarios without clear data distribution information.
+- **Exponential Density-Pruning Exact Linear Time (ED-PELT)**: ED-PELT requires minimal assumptions on data distributions. It models inter-arrival times using an exponential distribution. Like PELT, it works swiftly even on large datasets and particularly shines in complex scenarios without clear data distribution information.
 
 ### Evaluation
 
-For the time-series-based scenarios that encompass metrics which this tool is targeted for, the Exponential Density-Pruning Exact Linear Time (ED-PELT) algorithm shines among change-point detection methods, thanks to its distribution-free nature. It works without needing data distribution assumptions required by PELT, CUSUM, or GLR, accommodating various datasets effectively. With 'exact linear time' computational complexity, like PELT, it handles large datasets efficiently.
+For time-series-based scenarios that encompass various metrics, ED-PELT shines among change-point detection methods, thanks to its distribution-free nature. It works without needing data distribution assumptions required by PELT, CUSUM, or GLR, accommodating various datasets effectively. With 'exact linear time' computational complexity, like PELT, it handles large datasets efficiently.
 
-Its unique edge over ADWIN and PHT, known for their adaptive features, is its ability to model inter-arrival times using an exponential distribution, prime for tackling complex situations. Therefore, making ED-PELT a highly versatile and efficient tool.
+Its edge over ADWIN and PHT, known for their adaptive features, is its ability to model inter-arrival times using an exponential distribution, prime for tackling complex situations, making ED-PELT a highly versatile and efficient tool.
 
 ## Usage
 
