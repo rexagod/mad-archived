@@ -46,6 +46,7 @@ test-e2e:
 .PHONY: test
 test: test-unit test-e2e
 
+.PHONY: clean
 clean:
 	@rm -f mad
 	@git clean -fxd
@@ -99,4 +100,4 @@ mad: $(GO_FILES)
 	-X ${COMMON}/version.Branch=${BRANCH} \
 	-X ${COMMON}/version.BuildUser=${RUNNER} \
 	-X ${COMMON}/version.BuildDate=${BUILD_DATE}" \
-	-o mad
+	-o $@
